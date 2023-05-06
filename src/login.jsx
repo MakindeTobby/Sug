@@ -16,11 +16,7 @@ const Login = () => {
         }
 
         else {
-            Swal.fire(
-                "Matric number not found",
-                "",
-                "error"
-            )
+            return (alert("Matric No not found"))
         }
     }
     return (
