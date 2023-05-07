@@ -5,20 +5,19 @@ import Swal from "sweetalert2";
 const Login = () => {
     const navigate = useNavigate();
     const [matNo, setMatNo] = useState("");
+
     const handleLogin = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+
         if (matNo === "HND/100") {
-            navigate('/vote-page')
-
-        } if (matNo === "HND/200") {
-            navigate('/voter-table')
-
+            navigate('/vote-page');
+        } else if (matNo === "HND/200") {
+            navigate('/voter-table');
+        } else {
+            alert("Matric No not found");
         }
+    };
 
-        else {
-            return (alert("Matric No not found"))
-        }
-    }
     return (
 
         <div className="flex flex-col items-center justify-center w-screen h-screen bg-gray-200 text-gray-700">
